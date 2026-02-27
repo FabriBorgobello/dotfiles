@@ -3,6 +3,9 @@
   email = fborgobello@gmail.com
   signingkey = ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIGEUnJgmZOiPRLxLQbTGF4KYSkHBESN4IvfxzfKrOlWm
 
+[core]
+  excludesfile = ~/.gitignore_global
+
 [gpg]
   format = ssh
 
