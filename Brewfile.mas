@@ -1,0 +1,6 @@
+# App Store apps (requires 'mas' and being signed into the App Store)
+mas "Amphetamine", id: 937984704
+mas "Magnet", id: 441258766
+mas "WhatsApp", id: 310633997
+mas "Xcode", id: 497799835
+# mas "Aiko", id: 1672085276

@@ -1,4 +1,5 @@
 #!/bin/bash
+set -e
 
 echo "→ Setting up Node via fnm..."
 eval "$(fnm env)"
