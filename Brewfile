@@ -46,6 +46,3 @@ mas "Magnet", id: 441258766
 mas "WhatsApp", id: 310633997
 mas "Xcode", id: 497799835
 # mas "Aiko", id: 1672085276
-
-# Circus project dependencies
-# brew "maven"
