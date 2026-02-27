@@ -1,0 +1,37 @@
+[user]
+  name = Fabricio Borgobello
+  email = fborgobello@gmail.com
+  signingkey = ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIGEUnJgmZOiPRLxLQbTGF4KYSkHBESN4IvfxzfKrOlWm
+
+[gpg]
+  format = ssh
+
+[gpg "ssh"]
+  program = /Applications/1Password.app/Contents/MacOS/op-ssh-sign
+
+[commit]
+  gpgsign = true
+
+[init]
+  defaultBranch = main
+
+[alias]
+  # Branch
+  current-branch = rev-parse --abbrev-ref HEAD
+  current-repo = !basename $(git rev-parse --show-toplevel)
+
+  # History
+  delete-last-commit = reset --hard HEAD~1
+  fomo = !git fetch origin main:main && git merge main
+
+  # Stats
+  large-files = !git ls-tree -r --long HEAD | sort -k 4 -n -r | less
+  project-size = !git ls-tree -r --long HEAD | awk '{sum+=$4} END {printf "Total size: %d bytes (%.2f KB / %.2f MB / %.2f GB)\\n", sum, sum/1024, sum/1024/1024, sum/1024/1024/1024}'
+
+  # User
+  whoami = !git_name=$(git config user.name); git_email=$(git config user.email); \
+    if [ -z "$git_name" ] && [ -z "$git_email" ]; then \
+      echo "No Git user configured."; \
+    else \
+      echo "Current Git user: $git_name / $git_email"; \
+    fi
