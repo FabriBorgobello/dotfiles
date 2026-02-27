@@ -14,5 +14,7 @@ chmod 600 "$HOME/.ssh/config"
 mkdir -p "$HOME/.aws"
 chmod 700 "$HOME/.aws"
 cp "$DOTFILES_DIR/.aws/config" "$HOME/.aws/config"
+mkdir -p "$HOME/.claude"
+cp "$DOTFILES_DIR/.claude/CLAUDE.md" "$HOME/.claude/CLAUDE.md"
 
 echo "→ Dotfiles copied."
